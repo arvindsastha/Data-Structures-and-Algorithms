@@ -59,7 +59,7 @@ class HeapSort {
      * Method that performs heap sort
      * @param input - Input array
      */
-    private void heapSort(int[] input) {
+    void heapSort(int[] input) {
         // Build Max Heap
         buildMaxHeap(input);
         int heapSize = input.length - 1;

@@ -11,6 +11,7 @@ public class DataStructureUtils {
         for(int i=begin; i<=end; i++) {
             System.out.print(input[i] + " ");
         }
+        System.out.println("");
     }
 
     /**
