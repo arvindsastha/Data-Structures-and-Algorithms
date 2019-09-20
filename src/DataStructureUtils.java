@@ -20,4 +20,16 @@ public class DataStructureUtils {
     public static void printArray(int[] input) {
         printArrayBetweenStartAndEnd(input, 0, input.length - 1);
     }
+
+    /**
+     * Utility method to swap values
+     * @param input - Input array in which values should be swapped
+     * @param indexA - First index
+     * @param indexB - Second index
+     */
+    public static void swapValuesInArray(int[] input, int indexA, int indexB) {
+        int temp = input[indexA];
+        input[indexA] = input[indexB];
+        input[indexB] = temp;
+    }
 }

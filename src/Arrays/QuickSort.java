@@ -4,25 +4,26 @@ import src.DataStructureUtils;
 
 /**
  * Quick Sort Implementation
+ *
  * Divide & Conquer strategy
  * Merge Sort without additional space
  * Worst case complexity O(n2)
  *
  * Algorithm
- * 1.Choose a pivot (Random value). Mostly, first value or last value.
- * Here, pivot is the last element of the array
- * 2.Point the left pointer to the beginning of the array
- * 3.Point the right pointer to the end of the array but before the pivot [i.e, at end - 1 position]
- * 4.Move the left pointer towards the end until a value larger or equal to the pivot is found and stop. Also make a note of the position
- * 5.Now move the right pointer towards the beginning until a value smaller or equal than pivot is found
- * 6.Swap left pointer and right pointer
- * 7.Make a note of left pointer's position
- * 8.Continue until left moves beyond right or right goes before left
- * 9.Finally swap pivot with value at left pointer's position
- * 10.Split the array into 2: arr[start to pivot position -1] and arr[pivot position + 1 to end] until size of the array is 2
- * and repeat steps 1-10
+ * 1. Choose a pivot (Random value). Mostly, first value or last value. Here, pivot is the last element of the array
+ * 2. Point the left pointer to the beginning of the array
+ * 3. Point the right pointer to the end of the array but before the pivot [i.e, at end - 1 position]
+ * 4. Move the left pointer towards the end until a value larger or equal to the pivot is found and stop. Also make a note of the position
+ * 5. Now move the right pointer towards the beginning until a value smaller or equal than pivot is found
+ * 6. Swap left pointer and right pointer
+ * 7. Make a note of left pointer's position
+ * 8. Continue until left moves beyond right or right goes before left
+ * 9. Finally swap pivot with value at left pointer's position
+ * 10. Split the array into 2: arr[start to pivot position -1] and arr[pivot position + 1 to end] until size of the array is 2 and repeat steps 1-10
  */
 class QuickSort {
+
+    // For eg input => [4,2,2,8]
 
     /**
      * Method to split the array at the pivot and sort recursively
@@ -36,7 +37,6 @@ class QuickSort {
         // If begin is equal to end the size of the array is 1
         if(begin < end) {
             int pivotPosition = quickSort(input, begin, end);
-            // For eg input => [4,2,2,8]
             // When 8 is the pivot, pivot position will be last position
             // Right split is not possible anymore
 
