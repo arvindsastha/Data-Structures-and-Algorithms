@@ -1,5 +1,7 @@
 package src;
 
+import src.List.CustomLinkedList;
+
 public class DataStructureUtils {
     /**
      * Prints array values between the start and end index including start and end
@@ -32,5 +34,41 @@ public class DataStructureUtils {
         int temp = input[indexA];
         input[indexA] = input[indexB];
         input[indexB] = temp;
+    }
+
+    public static void printList(CustomLinkedList head) {
+        if(head != null) {
+            CustomLinkedList headCopy = head;
+
+            while (headCopy != null) {
+                System.out.println(headCopy.getNodeValue() + " ");
+                headCopy = headCopy.getNextNode();
+            }
+            System.out.println("");
+        } else {
+            // do nothing
+            System.out.println("Empty List");
+        }
+    }
+
+    public static CustomLinkedList createLinkedList() {
+        CustomLinkedList customLinkedList = new CustomLinkedList();
+        customLinkedList.add(1);
+        customLinkedList.add(2);
+        customLinkedList.add(3);
+        customLinkedList.add(4);
+        customLinkedList.add(5);
+        customLinkedList.add(6);
+        customLinkedList.add(7);
+
+        return customLinkedList;
+    }
+
+    public static String printNodeValue(CustomLinkedList node) {
+        if(node == null) {
+            return "Node is empty";
+        } else {
+            return node.getNodeValue() + "";
+        }
     }
 }
